@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  ubuntu:
+    build: ./ubuntu
+    container_name: ubuntu-container
+    networks:
+      - appnet
+
+  flask:
+    build: ./flask-app
+    container_name: flask-container
+    ports:
+      - "5001:5000"   # Flask доступен снаружи на 5001
+    depends_on:
+      - ubuntu
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge
