@@ -1,5 +1,6 @@
 # A proof of concept app "Command trigger"
-This is POC app, that shows that it's possible to trigger a command on a Linux machine remotely with a backend app via HTTP.
+This is POC app, that shows that it's possible to trigger a command on a Linux machine remotely with a backend app via HTTP.  
+The backend is build with `Flask`, for the Linux OS I used `Ubuntu`.  
 
 ## How to install
 Install Docker on your machine first. Then you can use Docker to start the whole application:
